@@ -13,7 +13,7 @@ const getInitialState = () =>
   // occur.
   isRenderingOnServer ? true : !window.matchMedia(QUERY).matches;
 function usePrefersReducedMotion() {
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(getInitialState);
+  const [setPrefersReducedMotion] = useState(getInitialState);
   useEffect(() => {
     const mediaQueryList = window.matchMedia(QUERY);
     const listener = event => {
@@ -24,7 +24,7 @@ function usePrefersReducedMotion() {
       mediaQueryList.removeListener(listener);
     };
   }, []);
-  return prefersReducedMotion;
+  return true;
 }
 
 export default usePrefersReducedMotion;
