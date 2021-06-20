@@ -109,7 +109,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'React', 'Eleventy', 'Vue', 'Node.js', 'WordPress'];
+  const skills = ['C/C++', 'Python', 'Unreal Engine 4', 'Git', 'Perforce', 'Visual Studio'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -119,24 +119,27 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Brittany and I enjoy creating things that live on the internet. My
-              interest in web development started back in 2012 when I decided to try editing custom
-              Tumblr themes — turns out hacking together a custom reblog button taught me a lot
-              about HTML &amp; CSS!
+              Hi! I'm Jack and I love writing clean, efficient code, especially for video games.
+              Growing up an avid gamer, aspiring engineer, and freelance writer, I've always been
+              fascinated by the intersection of media and technology, and video games are the
+              epitome of that combination. As far back as middle school, I've been prototyping
+              mechanics and recently developing full games of my own.
             </p>
 
             <p>
-              Fast-forward to today, and I've had the privilege of working at{' '}
-              <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
-              <a href="https://starry.com/">a start-up</a>,{' '}
-              <a href="https://www.apple.com/">a huge corporation</a>, and{' '}
-              <a href="https://scout.camd.northeastern.edu/">a student-led design studio</a>. My
-              main focus these days is building accessible, inclusive products and digital
-              experiences at <a href="https://upstatement.com/">Upstatement</a> for a variety of
-              clients.
+              Since then, I have worked on several projects at{' '}
+              <a href="https://www.ea.com/ea-studios/industrial-toys">
+                Electronic Arts (Industrial Toys)
+              </a>
+              , <a href="https://www.soe.ucsc.edu/">UC Santa Cruz</a>, and{' '}
+              <a href="https://prod.orangecoastcollege.edu/academics/business-computing/computer-science/index.html">
+                Orange Coast College
+              </a>
+              , as well as personal projects for{' '}
+              <a href="https://github.com/Jventoo">my portfolio</a>.
             </p>
 
-            <p>Here are a few technologies I've been working with recently:</p>
+            <p>Some of the prominent tech I've worked with over the years:</p>
           </div>
 
           <ul className="skills-list">
