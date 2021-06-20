@@ -244,7 +244,7 @@ const CV = () => {
 
   return (
     <StyledCVSection id="cv" ref={revealContainer}>
-      <h2 className="numbered-heading">Where I’ve Worked</h2>
+      <h2 className="numbered-heading">Curriculum Vitae</h2>
 
       <div className="inner">
         <StyledTabList role="tablist" aria-label="CV tabs" onKeyDown={e => onKeyDown(e)}>
