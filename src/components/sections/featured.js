@@ -108,6 +108,7 @@ const StyledProject = styled.li`
       grid-column: 1 / -1;
       padding: 40px 40px 30px;
       z-index: 5;
+      grid-row: 2 / 3;
     }
 
     @media (max-width: 480px) {
@@ -231,7 +232,6 @@ const StyledProject = styled.li`
   }
 
   .project-image {
-    ${({ theme }) => theme.mixins.boxShadow};
     grid-column: 6 / -1;
     grid-row: 1 / -1;
     position: relative;
@@ -239,28 +239,15 @@ const StyledProject = styled.li`
 
     @media (max-width: 768px) {
       grid-column: 1 / -1;
+      grid-row: 1 / 2;
       height: 100%;
-      opacity: 0.25;
     }
 
     a {
       width: 100%;
       height: 100%;
-      background-color: var(--green);
       border-radius: var(--border-radius);
       vertical-align: middle;
-
-      &:hover,
-      &:focus {
-        background: transparent;
-        outline: 0;
-
-        &:before,
-        .img {
-          background: transparent;
-          filter: none;
-        }
-      }
 
       &:before {
         content: '';
@@ -273,7 +260,6 @@ const StyledProject = styled.li`
         bottom: 0;
         z-index: 3;
         transition: var(--transition);
-        background-color: var(--navy);
         mix-blend-mode: screen;
       }
     }
@@ -281,7 +267,6 @@ const StyledProject = styled.li`
     .img {
       border-radius: var(--border-radius);
       mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(1) brightness(90%);
 
       @media (max-width: 768px) {
         object-fit: cover;
@@ -309,6 +294,8 @@ const Featured = () => {
                   gatsbyImageData(width: 700, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
                 }
               }
+              videoSourceURL
+              videoTitle
               tech
               github
               external
@@ -319,6 +306,25 @@ const Featured = () => {
       }
     }
   `);
+
+  const Video = ({ videoSrcURL, videoTitle }) => (
+    <div className="video">
+      <iframe
+        src={videoSrcURL}
+        title={videoTitle}
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        frameBorder="0"
+        webkitallowfullscreen="true"
+        mozallowfullscreen="true"
+        allowFullScreen
+        modestbranding="1"
+        rel="0"
+        controls="0"
+        width="100%"
+        height="350"
+      />
+    </div>
+  );
 
   const featuredProjects = data.featured.edges.filter(({ node }) => node);
   const revealTitle = useRef(null);
@@ -337,14 +343,22 @@ const Featured = () => {
   return (
     <section id="projects">
       <h2 className="numbered-heading" ref={revealTitle}>
-        Some Things I’ve Built
+        Some of My Projects
       </h2>
 
       <StyledProjectsGrid>
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { external, title, tech, github, cover } = frontmatter;
+            const {
+              external,
+              title,
+              tech,
+              github,
+              cover,
+              videoSourceURL,
+              videoTitle,
+            } = frontmatter;
             const image = getImage(cover);
 
             return (
@@ -386,9 +400,13 @@ const Featured = () => {
                 </div>
 
                 <div className="project-image">
-                  <a href={external ? external : github ? github : '#'}>
-                    <GatsbyImage image={image} alt={title} className="img" />
-                  </a>
+                  {videoSourceURL ? (
+                    <Video videoSrcURL={videoSourceURL} videoTitle={videoTitle} />
+                  ) : (
+                    <a href={external ? external : github ? github : '#'}>
+                      <GatsbyImage image={image} alt={title} className="img" />
+                    </a>
+                  )}
                 </div>
               </StyledProject>
             );

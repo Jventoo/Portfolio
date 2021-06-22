@@ -8,7 +8,8 @@ const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
   align-items: flex-start;
-  min-height: 100vh;
+  margin-top: 20vh;
+  min-height: 70vh;
   padding: 0;
 
   @media (max-width: 480px) and (min-height: 700px) {
