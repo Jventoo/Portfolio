@@ -1,7 +1,7 @@
 ---
 date: '1'
 title: 'Instant Wrapped'
-cover: ''
+cover:
 github: 'https://github.com/Jventoo/InstantWrapped/'
 external:
 videoSourceURL: https://www.youtube.com/embed/53LFEOlSG0c

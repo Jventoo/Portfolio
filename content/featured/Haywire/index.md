@@ -1,7 +1,7 @@
 ---
 date: '3'
 title: 'Haywire'
-cover: ''
+cover:
 github: 'https://drive.google.com/file/d/1rwOtVybU68o4uXnEKV75pfpOh8FDyy1R/view?usp=sharing'
 external: 'https://www.artstation.com/artwork/VgzJBZ'
 videoSourceURL: https://www.youtube.com/embed/OqQskd0We78
