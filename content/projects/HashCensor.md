@@ -1,13 +1,13 @@
 ---
-date: '2019-08-01'
-title: 'Beyond Sol'
-github: ''
-external: 'https://www.artstation.com/artwork/mDk81v'
+date: '2020-11-29'
+title: 'Hash Censorship'
+github: 'https://github.com/Jventoo/HatterCensorship'
+external: ''
 tech:
-  - Unreal Engine 4
-  - C++
-company: 'Apple'
+  - C
+company: 'UCSC'
 showInProjects: true
 ---
 
-Embeddable web player widget for Apple Music that lets users log in and listen to full song playback in the browser leveraging [MusicKit.js](https://developer.apple.com/documentation/musickitjs). Read more about this project on [9to5Mac](https://9to5mac.com/2018/06/03/apple-music-embeddable-web-player-listen-browser/).
+Checks if supplied input is forbidden and tries to properly censor it to an acceptable alternative, blocking the input if not.  
+Features a bloom filter ( O(1) ), a hash table for eliminating false positives and providing translations, linked list chaining for collisions, and regex parsing to support contractions and other abnormal inputs. See [repo](https://github.com/Jventoo/HatterCensorship) for more info.

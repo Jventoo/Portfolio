@@ -1,13 +1,12 @@
 ---
-date: '2019-08-01'
-title: 'Beyond Sol'
-github: ''
-external: 'https://www.artstation.com/artwork/mDk81v'
+date: '2019-12-16'
+title: 'Student DB'
+github: 'https://github.com/Jventoo/StudentDatabase'
+external: ''
 tech:
-  - Unreal Engine 4
   - C++
-company: 'Apple'
-showInProjects: true
+company: 'OCC'
+showInProjects: false
 ---
 
-Embeddable web player widget for Apple Music that lets users log in and listen to full song playback in the browser leveraging [MusicKit.js](https://developer.apple.com/documentation/musickitjs). Read more about this project on [9to5Mac](https://9to5mac.com/2018/06/03/apple-music-embeddable-web-player-listen-browser/).
+Former school project that allows an admin to track student's grades and enrollments. It is meant to showcase extensive usage of the STL (unsorted sets, maps, vectors, iterators), lambdas, predicate functions, input, output, and string streams, and object-oriented design.

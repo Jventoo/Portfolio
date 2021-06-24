@@ -1,13 +1,13 @@
 ---
-date: '2019-08-01'
-title: 'Beyond Sol'
-github: ''
-external: 'https://www.artstation.com/artwork/mDk81v'
+date: '2021-06-01'
+title: 'Pintos'
+github: 'https://github.com/Jventoo/CSE130/tree/main/lab3'
+external: ''
 tech:
-  - Unreal Engine 4
-  - C++
-company: 'Apple'
+  - C
+  - Pintos
+company: 'UCSC'
 showInProjects: true
 ---
 
-Embeddable web player widget for Apple Music that lets users log in and listen to full song playback in the browser leveraging [MusicKit.js](https://developer.apple.com/documentation/musickitjs). Read more about this project on [9to5Mac](https://9to5mac.com/2018/06/03/apple-music-embeddable-web-player-listen-browser/).
+Implemented eight system calls and launching custom user programs using ELF across multiple threads in the Stanford Pintos training operating system.

@@ -1,13 +1,12 @@
 ---
-date: '2019-08-01'
-title: 'Beyond Sol'
-github: ''
-external: 'https://www.artstation.com/artwork/mDk81v'
+date: '2020-06-05'
+title: 'Queue Simulation'
+github: 'https://github.com/Jventoo/Queue-Simulation-Project'
+external: ''
 tech:
-  - Unreal Engine 4
   - C++
-company: 'Apple'
-showInProjects: true
+company: 'OCC'
+showInProjects: false
 ---
 
-Embeddable web player widget for Apple Music that lets users log in and listen to full song playback in the browser leveraging [MusicKit.js](https://developer.apple.com/documentation/musickitjs). Read more about this project on [9to5Mac](https://9to5mac.com/2018/06/03/apple-music-embeddable-web-player-listen-browser/).
+Simulates wait times in a grocery store built as a school project. Features accompanying mock proposal and analysis documents. Extensively utilizes the STL, particularly queues, in an effort to emulate a real-world simulation with many scaleable, customizable parameters.

@@ -1,13 +1,12 @@
 ---
-date: '2019-08-01'
-title: 'Beyond Sol'
-github: ''
-external: 'https://www.artstation.com/artwork/mDk81v'
+date: '2020-10-20'
+title: 'Math Lib'
+github: 'https://github.com/Jventoo/MathLib'
+external: ''
 tech:
-  - Unreal Engine 4
-  - C++
-company: 'Apple'
+  - C
+company: 'UCSC'
 showInProjects: true
 ---
 
-Embeddable web player widget for Apple Music that lets users log in and listen to full song playback in the browser leveraging [MusicKit.js](https://developer.apple.com/documentation/musickitjs). Read more about this project on [9to5Mac](https://9to5mac.com/2018/06/03/apple-music-embeddable-web-player-listen-browser/).
+Lightweight library intended to run on Unix servers that implements Sin, Cos, Tan, and Exp using Pade approximants and Maclaurin series. Compares results against those from the standard C library functions.

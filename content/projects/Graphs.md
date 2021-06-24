@@ -1,13 +1,12 @@
 ---
-date: '2019-08-01'
-title: 'Beyond Sol'
-github: ''
-external: 'https://www.artstation.com/artwork/mDk81v'
+date: '2021-01-26'
+title: 'Graphs & SCCs'
+github: 'https://github.com/Jventoo/CSE101/tree/master/pa3'
+external: ''
 tech:
-  - Unreal Engine 4
   - C++
-company: 'Apple'
+company: 'UCSC'
 showInProjects: false
 ---
 
-Embeddable web player widget for Apple Music that lets users log in and listen to full song playback in the browser leveraging [MusicKit.js](https://developer.apple.com/documentation/musickitjs). Read more about this project on [9to5Mac](https://9to5mac.com/2018/06/03/apple-music-embeddable-web-player-listen-browser/).
+Finds the strongly connected components (SCCs) of a Graph G using Depth First Searches (DFS) of both G and its transpose. It also prints the adjacency list of G to the outfile prior to finding the SCCs.
