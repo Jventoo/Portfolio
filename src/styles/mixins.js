@@ -88,9 +88,9 @@ const mixins = {
   button,
 
   smallButton: css`
-    color: var(--green);
-    background-color: transparent;
-    border: 1px solid var(--green);
+    color: #ccc3c6;
+    background-color: #40506f;
+    border: 1px solid #40506f;
     border-radius: var(--border-radius);
     padding: 0.75rem 1rem;
     font-size: var(--fz-xs);

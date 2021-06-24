@@ -16,7 +16,7 @@ const StyledHeader = styled.header`
   padding: 0px 50px;
   width: 100%;
   height: var(--nav-height);
-  background-color: rgba(10, 25, 47, 0.85);
+  background-color: rgba(20, 21, 23, 1);
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
@@ -56,7 +56,7 @@ const StyledNav = styled.nav`
   ${({ theme }) => theme.mixins.flexBetween};
   position: relative;
   width: 100%;
-  color: var(--lightest-slate);
+  color: #ccc3c6;
   font-family: var(--font-mono);
   counter-reset: item 0;
   z-index: 12;
@@ -111,7 +111,7 @@ const StyledLinks = styled.div`
         &:before {
           content: '0' counter(item) '.';
           margin-right: 5px;
-          color: var(--green);
+          color: #ccc3c6;
           font-size: var(--fz-xxs);
           text-align: right;
         }
