@@ -133,8 +133,6 @@ const StyledProject = styled.li`
     }
 
     @media (max-width: 768px) {
-      color: var(--white);
-
       a {
         position: static;
 
@@ -272,7 +270,6 @@ const StyledProject = styled.li`
         object-fit: cover;
         width: auto;
         height: 100%;
-        filter: grayscale(100%) contrast(1) brightness(80%);
       }
     }
   }

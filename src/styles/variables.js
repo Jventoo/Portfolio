@@ -8,7 +8,7 @@ const variables = css`
     --lightest-navy: #233554; // No idea
     --navy-shadow: rgba(235, 230, 230, 0.7); // Proj shadows
     --dark-slate: #495670; // Scrollbar
-    --slate: #495670; // Most other text
+    --slate: #42557a; // Most other text
     --light-slate: #000000; // Sidebar+proj text
     --lightest-slate: #000000; // Hero name, header titles, proj titles
     --white: #e6f1ff; // No idea
@@ -32,7 +32,7 @@ const variables = css`
     --nav-scroll-height: 70px;
 
     --tab-height: 42px;
-    --tab-width: 120px;
+    --tab-width: 150px;
 
     --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
     --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);

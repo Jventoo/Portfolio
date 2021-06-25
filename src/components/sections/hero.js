@@ -17,7 +17,7 @@ const StyledHeroSection = styled.section`
   }
 
   h1 {
-    margin: 0 0 30px 4px;
+    margin: 0 0 20px 4px;
     color: var(--green);
     font-family: var(--font-mono);
     font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
@@ -37,11 +37,12 @@ const StyledHeroSection = styled.section`
   p {
     margin: 20px 0 0;
     max-width: 500px;
+    color: var(--green);
   }
 
   .email-link {
     ${({ theme }) => theme.mixins.bigButton};
-    margin-top: 50px;
+    margin-top: 40px;
   }
 `;
 
@@ -58,7 +59,7 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const one = <h1>Hey my name's</h1>;
+  const one = <h1>Hey, my name is</h1>;
   const two = <h2 className="big-heading">Jack Vento</h2>;
   const three = <h3 className="big-heading">I make video games.</h3>;
   const four = (

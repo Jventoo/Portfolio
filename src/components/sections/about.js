@@ -7,6 +7,7 @@ import { usePrefersReducedMotion } from '@hooks';
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
+  color: var(--light-slate);
 
   .inner {
     display: grid;
@@ -38,7 +39,7 @@ const StyledText = styled.div`
         content: '▹';
         position: absolute;
         left: 0;
-        color: var(--green);
+        color: var(--slate);
         font-size: var(--fz-sm);
         line-height: 12px;
       }

@@ -91,10 +91,9 @@ const Footer = () => {
       <StyledCredit tabindex="-1">
         <div>
           Adapted by Jack Vento.
-          <a href="https://brittanychiang.com/">
-            Template designed &amp; built by Brittany Chiang.
-          </a>
+          <a href="https://brittanychiang.com/">Inspired by Brittany Chiang.</a>
         </div>
+        All content and trademarks property of their respective owners.
       </StyledCredit>
     </StyledFooter>
   );

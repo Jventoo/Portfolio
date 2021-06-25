@@ -47,7 +47,7 @@ const mixins = {
     &:hover,
     &:active,
     &:focus {
-      color: var(--green);
+      color: #8ba8e0;
       outline: 0;
     }
   `,
@@ -58,11 +58,11 @@ const mixins = {
     text-decoration-skip-ink: auto;
     position: relative;
     transition: var(--transition);
-    color: var(--green);
+    color: #90abe0;
     &:hover,
     &:focus,
     &:active {
-      color: var(--green);
+      color: #495670;
       outline: 0;
       &:after {
         width: 100%;
@@ -134,12 +134,12 @@ const mixins = {
   `,
 
   boxShadow: css`
-    box-shadow: 0 10px 30px -15px var(--navy-shadow);
+    box-shadow: 0 10px 30px -15px #000000;
     transition: var(--transition);
 
     &:hover,
     &:focus {
-      box-shadow: 0 20px 30px -15px var(--navy-shadow);
+      box-shadow: 0 20px 30px -15px #000000;
     }
   `,
 
@@ -148,6 +148,7 @@ const mixins = {
     margin: 0;
     list-style: none;
     font-size: var(--fz-lg);
+    color: var(--light-slate);
     li {
       position: relative;
       padding-left: 30px;
@@ -156,7 +157,6 @@ const mixins = {
         content: '▹';
         position: absolute;
         left: 0;
-        color: var(--green);
       }
     }
   `,
