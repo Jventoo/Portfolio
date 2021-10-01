@@ -65,7 +65,7 @@ const Hero = () => {
   const four = (
     <p>
       I’m a hardworking, passionate student software engineer studying at UC Santa Cruz and
-      currently interning at EA Industrial Toys.
+      currently working at EA Industrial Toys.
     </p>
   );
   const five = (
