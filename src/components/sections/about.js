@@ -8,6 +8,7 @@ import { usePrefersReducedMotion } from '@hooks';
 const StyledAboutSection = styled.section`
   max-width: 900px;
   color: var(--light-slate);
+  align-items: center;
 
   .inner {
     display: grid;

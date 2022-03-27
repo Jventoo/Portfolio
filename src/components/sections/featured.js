@@ -343,6 +343,8 @@ const Featured = () => {
         Some of My Projects
       </h2>
 
+      <p className="project-overline">Please email me if you're looking for access to any private repos.</p> 
+
       <StyledProjectsGrid>
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {

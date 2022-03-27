@@ -9,6 +9,7 @@ import { usePrefersReducedMotion } from '@hooks';
 
 const StyledCVSection = styled.section`
   max-width: 700px;
+  align-items: center;
 
   .inner {
     display: flex;
