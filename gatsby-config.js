@@ -3,8 +3,7 @@ const config = require('./src/config');
 module.exports = {
   siteMetadata: {
     title: 'Jack Vento',
-    description:
-      'Jack Vento is a software engineer who specializes in video game development, specifically gameplay engineering.',
+    description: 'Jack Vento is a software engineer who specializes in video game development.',
     siteUrl: 'https://jackvento.com', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@JackVento2',
