@@ -152,7 +152,7 @@ const mixins = {
     li {
       position: relative;
       padding-left: 30px;
-      margin-bottom: 10px;
+      margin-bottom: 7px;
       &:before {
         content: '▹';
         position: absolute;

@@ -1,15 +1,16 @@
 ---
-date: '2021-06-21'
+date: '2022-03-21'
 title: 'Gameplay Engineer (AI)'
 company: 'EA Industrial Toys'
 location: 'Pasadena, CA'
-range: 'June - Dec 2021'
+range: 'Mar 2022 - Present'
 url: 'https://www.ea.com/ea-studios/industrial-toys'
+sidebar: 'Electronic Arts'
+project: 'Battlefield (IOS/Android)'
 ---
 
-- Worked on the recently announced, unreleased Battlefield Mobile (iOS/Android)
-- Created proprietary perception, aim randomization and difficulty scaling systems for AI
-- Refactored aiming models to support a variety of targets with easy designer tweaking
-- Wrote performant, clean code for various gameplay systems (largely for AI)
-- Using Unreal Engine 4 and C++ for production code, blueprints for prototyping
-- Started as an intern in Summer 2021 and converted to a part-time team member in September 2021
+- Converted bots to my own utility AI framework from an outdated behavior tree.
+- Overhauled equipment management systems to use a state machine supported by my utility systems, resulting in 1⁄4 the bugs and 2x runtime performance.
+- Shipped a wealth of behaviors to support 6 unique game modes that increased retention by 15%.
+- Produced a host of editor tools that automatically scrape and configure AI levels for designers.
+- Contributed to debug tools, including an automated suite of client bot CI tests.

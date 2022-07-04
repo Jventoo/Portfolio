@@ -1,9 +1,8 @@
 ---
 date: '2018-03-01'
-title: 'Designer/Programmer'
+title: 'Engineer/Designer'
 company: 'Indie'
-location: 'Orange County, CA'
-range: 'March 2018 - Present'
+range: 'Mar 2018 - Present'
 url: 'https://jackvento.com/#projects'
 ---
 

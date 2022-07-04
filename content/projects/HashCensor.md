@@ -6,7 +6,7 @@ external: ''
 tech:
   - C
 company: 'UCSC'
-showInProjects: true
+showInProjects: false
 ---
 
 Checks if supplied input is forbidden and tries to properly censor it to an acceptable alternative, blocking the input if not.  

@@ -138,9 +138,9 @@ const StyledTabPanels = styled.div`
 `;
 
 const StyledTabPanel = styled.div`
-  width: 100%;
+  width: 150%;
   height: auto;
-  padding: 10px 5px;
+  padding: 5px 5px;
 
   ul {
     ${({ theme }) => theme.mixins.fancyList};
@@ -150,7 +150,7 @@ const StyledTabPanel = styled.div`
     margin-bottom: 2px;
     font-size: var(--fz-xxl);
     font-weight: 500;
-    line-height: 1.3;
+    line-height: 1.2;
 
     .company {
       color: var(--green);
@@ -158,7 +158,7 @@ const StyledTabPanel = styled.div`
   }
 
   .range {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     color: var(--light-slate);
     font-family: var(--font-mono);
     font-size: var(--fz-xs);
@@ -172,23 +172,31 @@ const CV = () => {
         filter: { fileAbsolutePath: { regex: "/cv/" } }
         sort: { fields: [frontmatter___date], order: DESC }
       ) {
-        edges {
-          node {
-            frontmatter {
-              title
-              company
-              location
-              range
-              url
+        group(field: frontmatter___company) {
+          fieldValue
+          totalCount
+          edges {
+            node {
+              frontmatter {
+                title
+                company
+                location
+                range
+                url
+                sidebar
+                project
+              }
+              html
             }
-            html
           }
         }
       }
     }
   `);
 
-  const cvData = data.cv.edges;
+  const cvData = data.cv.group;
+
+  let panelIndex = 0;
 
   const [activeTabId, setActiveTabId] = useState(0);
   const [tabFocus, setTabFocus] = useState(null);
@@ -243,15 +251,19 @@ const CV = () => {
     }
   };
 
-  return (
+  const cvSection = (
     <StyledCVSection id="cv" ref={revealContainer}>
       <h2 className="numbered-heading">Curriculum Vitae</h2>
 
       <div className="inner">
         <StyledTabList role="tablist" aria-label="CV tabs" onKeyDown={e => onKeyDown(e)}>
           {cvData &&
-            cvData.map(({ node }, i) => {
+            cvData.map((group, i) => {
+              // Only generating one tab per company
+              const node = group.edges[0].node;
+              const { sidebar } = node.frontmatter;
               const { company } = node.frontmatter;
+
               return (
                 <StyledTabButton
                   key={i}
@@ -262,50 +274,72 @@ const CV = () => {
                   role="tab"
                   tabIndex={activeTabId === i ? '0' : '-1'}
                   aria-selected={activeTabId === i ? true : false}
-                  aria-controls={`panel-${i}`}>
-                  <span>{company}</span>
+                  aria-controls={`panel-${i}`}
+                >
+                  <span>{sidebar ? sidebar : company}</span>
                 </StyledTabButton>
               );
             })}
           <StyledHighlight activeTabId={activeTabId} />
         </StyledTabList>
-
         <StyledTabPanels>
           {cvData &&
-            cvData.map(({ node }, i) => {
+            cvData.map((group, groupIdx) => group.edges.map(({ node }, idxInGroup) => {
               const { frontmatter, html } = node;
-              const { title, url, company, range } = frontmatter;
+              const { title, url, company, range, project } = frontmatter;
+              const panelKey = panelIndex;
+              const panelGroupID = groupIdx;
 
-              return (
-                <CSSTransition key={i} in={activeTabId === i} timeout={250} classNames="fade">
+              const panel = (
+                <CSSTransition
+                  key={panelKey}
+                  in={activeTabId === panelGroupID}
+                  timeout={250}
+                  classNames="fade"
+                >
                   <StyledTabPanel
-                    id={`panel-${i}`}
+                    id={`panel-${panelKey}`}
                     role="tabpanel"
-                    tabIndex={activeTabId === i ? '0' : '-1'}
-                    aria-labelledby={`tab-${i}`}
-                    aria-hidden={activeTabId !== i}
-                    hidden={activeTabId !== i}>
+                    tabIndex={activeTabId === panelGroupID ? '0' : '-1'}
+                    aria-labelledby={`tab-${panelGroupID}`}
+                    aria-hidden={activeTabId !== panelGroupID}
+                    hidden={activeTabId !== panelGroupID}
+                  >
                     <h3>
                       <span>{title}</span>
-                      <span className="company">
-                        &nbsp;@&nbsp;
+                      <span className="company" hidden={idxInGroup !== 0}>
+                          &nbsp;-&nbsp;
                         <a href={url} className="inline-link">
                           {company}
                         </a>
                       </span>
                     </h3>
 
-                    <p className="range">{range}</p>
+                    <p className="range">
+                      <span>
+                        {project}
+                        {project && <span>,&nbsp;</span>}
+                        {range}
+                      </span>
+                    </p>
 
                     <div dangerouslySetInnerHTML={{ __html: html }} />
                   </StyledTabPanel>
                 </CSSTransition>
               );
-            })}
+
+              panelIndex = panelIndex + 1;
+
+              return panel;
+            }))}
         </StyledTabPanels>
       </div>
     </StyledCVSection>
   );
+
+  panelIndex = 0;
+
+  return cvSection;
 };
 
 export default CV;

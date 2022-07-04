@@ -128,11 +128,10 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hi! I'm Jack and I love writing clean, efficient code, especially for video games.
-              Growing up an avid gamer, aspiring engineer, and freelance writer, I've always been
+              Hi! I'm Jack and I love writing clean, scalable code, especially for video games.
+              Growing up an avid gamer, aspiring engineer, and creative writer, I've always been
               fascinated by the intersection of media and technology, and video games are the
-              epitome of that combination. As far back as middle school, I've been prototyping
-              mechanics and recently developing full games of my own.
+              epitome of that combination.
             </p>
 
             <p>
@@ -160,11 +159,11 @@ const About = () => {
           <div className="wrapper">
             <StaticImage
               className="img"
-              src="../../images/me.jpg"
+              src="../../images/trainer.png"
               width={500}
-              quality={95}
+              quality={100}
               formats={['AUTO', 'WEBP', 'AVIF']}
-              alt="Headshot"
+              alt="Trainer Card"
             />
           </div>
         </StyledPic>
