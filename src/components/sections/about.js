@@ -159,7 +159,7 @@ const About = () => {
           <div className="wrapper">
             <StaticImage
               className="img"
-              src="../../images/trainer.png"
+              src="../../images/Trainer.png"
               width={500}
               quality={100}
               formats={['AUTO', 'WEBP', 'AVIF']}
