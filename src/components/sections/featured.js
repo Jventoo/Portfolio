@@ -286,6 +286,7 @@ const Featured = () => {
           node {
             frontmatter {
               title
+              header
               cover {
                 childImageSharp {
                   gatsbyImageData(width: 700, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
@@ -343,28 +344,23 @@ const Featured = () => {
         Some of My Projects
       </h2>
 
-      <p className="project-overline">Please email me if you're looking for access to any private repos.</p> 
+      <p className="project-overline">
+        Please email me if you're looking for access to any private repos.
+      </p>
 
       <StyledProjectsGrid>
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const {
-              external,
-              title,
-              tech,
-              github,
-              cover,
-              videoSourceURL,
-              videoTitle,
-            } = frontmatter;
+            const { external, title, header, tech, github, cover, videoSourceURL, videoTitle } =
+              frontmatter;
             const image = getImage(cover);
 
             return (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
                 <div className="project-content">
                   <div>
-                    <p className="project-overline">Featured Project</p>
+                    <p className="project-overline">{header ? header : 'Featured Project'}</p>
 
                     <h3 className="project-title">
                       <a href={external}>{title}</a>

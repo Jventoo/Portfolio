@@ -1,5 +1,6 @@
 ---
 date: '4'
+header: 'Electronic Arts (2021-Present)'
 title: 'Battlefield Mobile'
 cover: './Battlefield2042.jpg'
 github:
@@ -13,6 +14,6 @@ tech:
 showInProjects: true
 ---
 
-Built from the ground up to be a standalone entry in the franchise, Battlefield Mobile is a fully-fledged, skill-based experience coming to iOS & Android.
+Built from the ground up to be a standalone Battlefield game, _Battlefield Mobile_ is a fully-fledged AAA FPS for iOS & Android.
 
-As a gameplay engineer at Industrial Toys, I'm primarily working on bots (utility AI, perception, combat, equipment, and more), as well as interacting with a number of other systems (weapons, movement, game-modes). See my resume for more!
+As a **gameplay engineer** at **EA Industrial Toys**, I'm primarily working on bots (utility AI, perception, combat, equipment, and more), as well as interacting with with other gameplay systems (e.g. weapons, movement, game-modes). See my resume for more!

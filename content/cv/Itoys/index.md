@@ -14,3 +14,4 @@ project: 'Battlefield (IOS/Android)'
 - Shipped a wealth of behaviors to support 6 unique game modes that increased retention by 15%.
 - Produced a host of editor tools that automatically scrape and configure AI levels for designers.
 - Contributed to debug tools, including an automated suite of client bot CI tests.
+- Assisted development of other gameplay systems (e.g. movement, weapons, animation, input, vehicles).
