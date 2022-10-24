@@ -61,9 +61,9 @@ const Hero = () => {
 
   const one = <h1>Hey, my name is</h1>;
   const two = <h2 className="big-heading">Jack Vento</h2>;
-  const three = <h3 className="big-heading">I make video games.</h3>;
+  const three = <h3 className="big-heading">I build solutions.</h3>;
   const four = (
-    <p>I’m a hardworking, passionate software engineer currently working at EA Industrial Toys.</p>
+    <p>I’m a hardworking, passionate software engineer currently working at Electronic Arts.</p>
   );
   const five = (
     <a className="email-link" href={RESUME_LINK} target="_blank" rel="noopener noreferrer">
