@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled, { css } from 'styled-components';
 import { navLinks } from '@config';
-import { loaderDelay } from '@utils';
+import { loaderDelay, RESUME_LINK } from '@utils';
 import { useScrollDirection, usePrefersReducedMotion } from '@hooks';
 import { Menu } from '@components';
 
@@ -160,7 +160,7 @@ const Nav = ({ isHome }) => {
   const Logo = <div className="logo" tabIndex="-1"></div>;
 
   const ResumeLink = (
-    <a className="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+    <a className="resume-button" href={RESUME_LINK} target="_blank" rel="noopener noreferrer">
       Resume
     </a>
   );

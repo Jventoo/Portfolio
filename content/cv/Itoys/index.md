@@ -9,9 +9,8 @@ sidebar: 'Electronic Arts'
 project: 'Battlefield (IOS/Android)'
 ---
 
-- Converted bots to my own utility AI framework from an outdated behavior tree.
-- Overhauled equipment management systems to use a state machine supported by my utility systems, resulting in 1⁄4 the bugs and 2x runtime performance.
-- Shipped a wealth of behaviors to support 6 unique game modes that increased retention by 15%.
-- Produced a host of editor tools that automatically scrape and configure AI levels for designers.
-- Contributed to debug tools, including an automated suite of client bot CI tests.
-- Assisted development of other gameplay systems (e.g. movement, weapons, animation, input, vehicles).
+- Shipped a proprietary Utility Theory decision making framework that decreased bugs by 34% and sped up content creation by 64%.
+- Developed a suite of NPC design tools that allow customized spawning, combat encounters, and vehicle behaviors.
+- Rewrote editor processes to allow for better designer interfacing & auditing, more descriptive error reporting, and less crashes when entering an error-state.
+- Assisted in revising cross-team production processes, leading to upwards of 24 man-hours saved per milestone.
+- Contributed to development of other gameplay systems (e.g. movement, weapons, animation, input, vehicles).

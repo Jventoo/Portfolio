@@ -9,8 +9,8 @@ sidebar: 'Electronic Arts'
 project: 'Battlefield (IOS/Android)'
 ---
 
-- Shipped an AI difficulty level system that scales behaviors and overall skill according to designer-exposed curves.
-- Engineered a perception framework with a 10x performance increase over UE4’s implementation.
-- Refactored aiming models to support a variety of targets with easy designer tweaking.
-- Created an aim randomization system that improved player engagement with bots.
+- Designed, engineered, and shipped a monotonic AI level of difficulty system that scales bot skill using designer curves and helped increase Day 1 retention.
+- Created an aim randomization system that interfaces with my previously created level of difficulty system, further helping increase Day 1 retention.
+- Refactored aiming models to support different target types (humans, tanks, helicopters, etc).
+- Engineered a proprietary perception framework based on Epic's original Unreal implementations with better scalability and 12% performance gains.
 - Promoted to _Gameplay Engineer_ in Sep 2021 from _Gameplay Engineer Intern_, inheriting more systems like equipment, aiming, targeting, and more.

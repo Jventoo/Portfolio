@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { navLinks } from '@config';
-import { KEY_CODES } from '@utils';
+import { KEY_CODES, RESUME_LINK } from '@utils';
 import { useOnClickOutside } from '@hooks';
 
 const StyledMenu = styled.div`
@@ -246,7 +246,8 @@ const Menu = () => {
           onClick={toggleMenu}
           menuOpen={menuOpen}
           ref={buttonRef}
-          aria-label="Menu">
+          aria-label="Menu"
+        >
           <div className="ham-box">
             <div className="ham-box-inner" />
           </div>
@@ -266,7 +267,7 @@ const Menu = () => {
               </ol>
             )}
 
-            <a href="/resume.pdf" className="resume-link">
+            <a href={RESUME_LINK} className="resume-link">
               Resume
             </a>
           </nav>

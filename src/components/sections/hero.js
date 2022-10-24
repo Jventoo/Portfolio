@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
-import { navDelay, loaderDelay } from '@utils';
+import { navDelay, loaderDelay, RESUME_LINK } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
 
 const StyledHeroSection = styled.section`
@@ -66,7 +66,7 @@ const Hero = () => {
     <p>I’m a hardworking, passionate software engineer currently working at EA Industrial Toys.</p>
   );
   const five = (
-    <a className="email-link" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+    <a className="email-link" href={RESUME_LINK} target="_blank" rel="noopener noreferrer">
       Resume
     </a>
   );
