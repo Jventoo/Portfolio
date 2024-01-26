@@ -8,9 +8,17 @@ const StyledMainContainer = styled.main`
   counter-reset: section;
 `;
 
+const maintenanceContent = (
+  <StyledMainContainer className="fillHeight">
+    <StyledTitle>Site under maintenance</StyledTitle>
+    <StyledSubtitle>Please visit https://www.linkedin.com/in/jack-vento/</StyledSubtitle>
+  </StyledMainContainer>
+);
+
 const IndexPage = ({ location }) => (
   <Layout location={location}>
     <Helmet title="Site under maintenance" />
+    {content}
     {/* <StyledMainContainer className="fillHeight">
       <Hero />
       <About />
