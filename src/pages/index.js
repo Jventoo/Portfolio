@@ -29,7 +29,7 @@ const maintenanceContent = (
 const IndexPage = ({ location }) => (
   <Layout location={location}>
     <Helmet title="Site under maintenance" />
-    {content}
+    {maintenanceContent}
     {/* <StyledMainContainer className="fillHeight">
       <Hero />
       <About />
