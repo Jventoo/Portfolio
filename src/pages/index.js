@@ -15,7 +15,7 @@ const StyledTitle = styled.h1`
   line-height: 1;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 60vh;
+  margin-top: 20vh;
   min-height: 70vh;
   padding: 0;
 `;
