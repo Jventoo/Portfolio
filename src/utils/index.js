@@ -24,4 +24,4 @@ export const KEY_CODES = {
 };
 
 export const RESUME_LINK =
-  'https://docs.google.com/viewer?url=https://docs.google.com/document/d/1tTCOW1N9NahhPitvUYSfvRg5tK-Js7QaeM1Las_n5sc/export?format=pdf';
+  'https://drive.google.com/file/d/19wKhEqZz67UHw-D6w2k6xPnYVisWxX_r/view?usp=sharing';
