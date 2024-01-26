@@ -13,6 +13,11 @@ const StyledTitle = styled.h1`
   font-family: var(--font-mono);
   font-size: clamp(100px, 25vw, 200px);
   line-height: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20vh;
+  min-height: 70vh;
+  padding: 0;
 `;
 const StyledSubtitle = styled.h2`
   font-size: clamp(30px, 5vw, 50px);
@@ -29,15 +34,15 @@ const maintenanceContent = (
 const IndexPage = ({ location }) => (
   <Layout location={location}>
     <Helmet title="Site under maintenance" />
-    {maintenanceContent}
-    {/* <StyledMainContainer className="fillHeight">
-      <Hero />
+    <StyledMainContainer className="fillHeight">
+      {maintenanceContent}
+      {/* <Hero />
       <About />
       <CV />
       <Featured />
       <Projects />
-      <Contact />
-    </StyledMainContainer> */}
+      <Contact /> */}
+    </StyledMainContainer>
   </Layout>
 );
 
