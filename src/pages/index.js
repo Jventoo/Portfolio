@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import { Layout, Hero, About, CV, Featured, Projects, Contact } from '@components';
 
 const StyledMainContainer = styled.main`
