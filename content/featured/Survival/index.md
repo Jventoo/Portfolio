@@ -15,4 +15,4 @@ showInProjects: true
 
 Blizzard's Unannounced Survival Game was a next-gen multiplatform multiplayer title targeting an incredible amount of AI and players all at once.
 
-On this title, I was responsible for helping build the AI creatures.
+On this title, I was responsible for helping build the AI creatures as a **gameplay AI engineer**.

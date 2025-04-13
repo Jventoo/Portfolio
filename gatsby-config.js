@@ -6,7 +6,6 @@ module.exports = {
     description: 'Jack Vento is a software engineer who specializes in video game development.',
     siteUrl: 'https://jackvento.com', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
-    twitterUsername: '@JackVento2',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
