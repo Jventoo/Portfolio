@@ -9,7 +9,7 @@ const StyledHeroSection = styled.section`
   flex-direction: column;
   align-items: flex-start;
   margin-top: 20vh;
-  min-height: 70vh;
+  min-height: 50vh;
   padding: 0;
 
   @media (max-width: 480px) and (min-height: 700px) {
@@ -74,7 +74,7 @@ const Hero = () => {
   const items = [one, two, three, four, five];
 
   return (
-    <StyledHeroSection>
+    <StyledHeroSection id="hero">
       {prefersReducedMotion ? (
         <>
           {items.map((item, i) => (

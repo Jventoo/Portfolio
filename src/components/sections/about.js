@@ -139,7 +139,7 @@ const About = () => {
               <a href="https://www.archetype-entertainment.com/en-US">
                 Wizards of the Coast (Archetype Entertainment)
               </a>
-              , <a href="https://www.blizzard.com/en-us/">Blizzard Entertainment</a>, and{' '}
+              ,<a href="https://www.blizzard.com/en-us/">Blizzard Entertainment</a>, and{' '}
               <a href="https://www.ea.com/ea-studios">Electronic Arts (Industrial Toys)</a>.
             </p>
 

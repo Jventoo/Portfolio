@@ -171,7 +171,7 @@ const Projects = () => {
           fileAbsolutePath: { regex: "/projects/" }
           frontmatter: { showInProjects: { ne: false } }
         }
-        sort: { frontmatter: { date: ASC } }
+        sort: { frontmatter: { date: DESC } }
       ) {
         edges {
           node {

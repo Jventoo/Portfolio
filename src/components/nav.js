@@ -7,6 +7,7 @@ import { navLinks } from '@config';
 import { loaderDelay, RESUME_LINK } from '@utils';
 import { useScrollDirection, usePrefersReducedMotion } from '@hooks';
 import { Menu } from '@components';
+import { IconLogo } from '@components/icons';
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -65,17 +66,10 @@ const StyledNav = styled.nav`
     ${({ theme }) => theme.mixins.flexCenter};
 
     a {
-      color: var(--green);
       width: 42px;
       height: 42px;
 
       &:hover,
-      &:focus {
-        svg {
-          fill: var(--green-tint);
-        }
-      }
-
       svg {
         fill: none;
         transition: var(--transition);
@@ -157,7 +151,19 @@ const Nav = ({ isHome }) => {
   const fadeClass = isHome ? 'fade' : '';
   const fadeDownClass = isHome ? 'fadedown' : '';
 
-  const Logo = <div className="logo" tabIndex="-1"></div>;
+  const Logo = (
+    <div className="logo" tabIndex="-1">
+      {isHome ? (
+        <a href="#root" aria-label="home">
+          <IconLogo />
+        </a>
+      ) : (
+        <Link to="/" aria-label="home">
+          <IconLogo />
+        </Link>
+      )}
+    </div>
+  );
 
   const ResumeLink = (
     <a className="resume-button" href={RESUME_LINK} target="_blank" rel="noopener noreferrer">

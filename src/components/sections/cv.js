@@ -19,7 +19,7 @@ const StyledCVSection = styled.section`
 
     // Prevent container from jumping
     @media (min-width: 700px) {
-      min-height: 400px;
+      min-height: 420px;
     }
   }
 `;
