@@ -169,9 +169,9 @@ const CV = () => {
     query {
       cv: allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/cv/" } }
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { frontmatter: { date: DESC } }
       ) {
-        group(field: frontmatter___company) {
+        group(field: { frontmatter: { company: SELECT } }) {
           fieldValue
           totalCount
           edges {
