@@ -8,7 +8,6 @@ import { Icon } from '@components/icons';
 import { usePrefersReducedMotion } from '@hooks';
 
 const StyledProjectsSection = styled.section`
-  display: flex;
   flex-direction: column;
   align-items: center;
 
@@ -279,15 +278,13 @@ const Projects = () => {
                   key={i}
                   classNames="fadeup"
                   timeout={i >= GRID_LIMIT ? (i - GRID_LIMIT) * 300 : 300}
-                  exit={false}
-                >
+                  exit={false}>
                   <StyledProject
                     key={i}
                     ref={el => (revealProjects.current[i] = el)}
                     style={{
                       transitionDelay: `${i >= GRID_LIMIT ? (i - GRID_LIMIT) * 100 : 0}ms`,
-                    }}
-                  >
+                    }}>
                     {projectInner(node)}
                   </StyledProject>
                 </CSSTransition>
@@ -299,8 +296,7 @@ const Projects = () => {
       <button
         className="more-button"
         hidden={projects.length <= 6}
-        onClick={() => setShowMore(!showMore)}
-      >
+        onClick={() => setShowMore(!showMore)}>
         Show {showMore ? 'Less' : 'More'}
       </button>
     </StyledProjectsSection>

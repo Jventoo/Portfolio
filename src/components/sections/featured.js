@@ -315,9 +315,7 @@ const Featured = () => {
         webkitallowfullscreen="true"
         mozallowfullscreen="true"
         allowFullScreen
-        modestbranding="1"
         rel="0"
-        controls="0"
         width="100%"
         height="350"
       />
@@ -344,9 +342,9 @@ const Featured = () => {
         Some of My Projects
       </h2>
 
-      <p className="project-overline">
+      {/* <p className="project-overline">
         Please email me if you're looking for access to any private repos.
-      </p>
+      </p> */}
 
       <StyledProjectsGrid>
         {featuredProjects &&

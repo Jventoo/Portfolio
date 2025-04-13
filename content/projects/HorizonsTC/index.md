@@ -1,5 +1,5 @@
 ---
-date: '2'
+date: '2022-02-01'
 title: 'Trailblazer Crisis'
 cover: './TC Dock.jpg'
 github:

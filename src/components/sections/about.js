@@ -115,9 +115,9 @@ const About = () => {
     'C/C++',
     'Python',
     'AI Programming',
-    'Unreal Engine 4',
+    'Unreal Engine 4/5',
     'Perforce',
-    'Atlassian Stack',
+    'Jira/Confluence',
   ];
 
   return (
@@ -128,23 +128,19 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hi! I'm Jack and I love writing clean, scalable code, especially for video games.
-              Growing up an avid gamer, aspiring engineer, and creative writer, I've always been
-              fascinated by the intersection of media and technology, and video games are the
-              epitome of that combination.
+              Hi! I'm Jack and I'm a software engineer with a passion for developing innovative and
+              scalable solutions. Growing up an avid gamer and aspiring engineer, my enthusiasm for
+              technology stems from the deep intersection of creativity and engineering that
+              software engineering provides.
             </p>
 
             <p>
-              Since then, I have worked on several projects at{' '}
-              <a href="https://www.ea.com/ea-studios/industrial-toys">
-                Electronic Arts (Industrial Toys)
+              Over my career, I have contributed to collaborative, high-impact projects at{' '}
+              <a href="https://www.archetype-entertainment.com/en-US">
+                Wizards of the Coast (Archetype Entertainment)
               </a>
-              , <a href="https://www.soe.ucsc.edu/">UC Santa Cruz</a>, and{' '}
-              <a href="https://prod.orangecoastcollege.edu/academics/business-computing/computer-science/index.html">
-                Orange Coast College
-              </a>
-              , as well as personal projects for{' '}
-              <a href="https://github.com/Jventoo">my portfolio</a>.
+              , <a href="https://www.blizzard.com/en-us/">Blizzard Entertainment</a>, and{' '}
+              <a href="https://www.ea.com/ea-studios">Electronic Arts (Industrial Toys)</a>.
             </p>
 
             <p>Some of the prominent tech I've worked with over the years:</p>

@@ -1,5 +1,5 @@
 ---
-date: '3'
+date: '2022-02-01'
 title: 'Haywire'
 cover:
 github:
@@ -8,7 +8,6 @@ videoSourceURL: https://www.youtube.com/embed/OqQskd0We78
 videoTitle: 'Haywire Finale'
 tech:
   - C++
-  - Blueprints
   - Unreal Engine 4
 showInProjects: true
 ---

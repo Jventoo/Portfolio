@@ -9,7 +9,6 @@ import { usePrefersReducedMotion } from '@hooks';
 
 const StyledCVSection = styled.section`
   max-width: 700px;
-  align-items: center;
 
   .inner {
     display: flex;
@@ -20,7 +19,7 @@ const StyledCVSection = styled.section`
 
     // Prevent container from jumping
     @media (min-width: 700px) {
-      min-height: 340px;
+      min-height: 400px;
     }
   }
 `;
@@ -178,6 +177,7 @@ const CV = () => {
           edges {
             node {
               frontmatter {
+                date
                 title
                 company
                 location
@@ -194,7 +194,13 @@ const CV = () => {
     }
   `);
 
-  const cvData = data.cv.group;
+  const sortCV = (a, b) => {
+    const dateA = a.edges[0].node.frontmatter.date;
+    const dateB = b.edges[0].node.frontmatter.date;
+    return new Date(dateB) - new Date(dateA);
+  };
+
+  const cvData = data.cv.group.toSorted(sortCV);
 
   let panelIndex = 0;
 
@@ -274,8 +280,7 @@ const CV = () => {
                   role="tab"
                   tabIndex={activeTabId === i ? '0' : '-1'}
                   aria-selected={activeTabId === i ? true : false}
-                  aria-controls={`panel-${i}`}
-                >
+                  aria-controls={`panel-${i}`}>
                   <span>{sidebar ? sidebar : company}</span>
                 </StyledTabButton>
               );
@@ -284,54 +289,54 @@ const CV = () => {
         </StyledTabList>
         <StyledTabPanels>
           {cvData &&
-            cvData.map((group, groupIdx) => group.edges.map(({ node }, idxInGroup) => {
-              const { frontmatter, html } = node;
-              const { title, url, company, range, project } = frontmatter;
-              const panelKey = panelIndex;
-              const panelGroupID = groupIdx;
+            cvData.map((group, groupIdx) =>
+              group.edges.map(({ node }, idxInGroup) => {
+                const { frontmatter, html } = node;
+                const { title, url, company, range, project } = frontmatter;
+                const panelKey = panelIndex;
+                const panelGroupID = groupIdx;
 
-              const panel = (
-                <CSSTransition
-                  key={panelKey}
-                  in={activeTabId === panelGroupID}
-                  timeout={250}
-                  classNames="fade"
-                >
-                  <StyledTabPanel
-                    id={`panel-${panelKey}`}
-                    role="tabpanel"
-                    tabIndex={activeTabId === panelGroupID ? '0' : '-1'}
-                    aria-labelledby={`tab-${panelGroupID}`}
-                    aria-hidden={activeTabId !== panelGroupID}
-                    hidden={activeTabId !== panelGroupID}
-                  >
-                    <h3>
-                      <span>{title}</span>
-                      <span className="company" hidden={idxInGroup !== 0}>
+                const panel = (
+                  <CSSTransition
+                    key={panelKey}
+                    in={activeTabId === panelGroupID}
+                    timeout={250}
+                    classNames="fade">
+                    <StyledTabPanel
+                      id={`panel-${panelKey}`}
+                      role="tabpanel"
+                      tabIndex={activeTabId === panelGroupID ? '0' : '-1'}
+                      aria-labelledby={`tab-${panelGroupID}`}
+                      aria-hidden={activeTabId !== panelGroupID}
+                      hidden={activeTabId !== panelGroupID}>
+                      <h3>
+                        <span>{title}</span>
+                        <span className="company" hidden={idxInGroup !== 0}>
                           &nbsp;-&nbsp;
-                        <a href={url} className="inline-link">
-                          {company}
-                        </a>
-                      </span>
-                    </h3>
+                          <a href={url} className="inline-link">
+                            {company}
+                          </a>
+                        </span>
+                      </h3>
 
-                    <p className="range">
-                      <span>
-                        {project}
-                        {project && <span>,&nbsp;</span>}
-                        {range}
-                      </span>
-                    </p>
+                      <p className="range">
+                        <span>
+                          {project}
+                          {project && <span>,&nbsp;</span>}
+                          {range}
+                        </span>
+                      </p>
 
-                    <div dangerouslySetInnerHTML={{ __html: html }} />
-                  </StyledTabPanel>
-                </CSSTransition>
-              );
+                      <div dangerouslySetInnerHTML={{ __html: html }} />
+                    </StyledTabPanel>
+                  </CSSTransition>
+                );
 
-              panelIndex = panelIndex + 1;
+                panelIndex = panelIndex + 1;
 
-              return panel;
-            }))}
+                return panel;
+              }),
+            )}
         </StyledTabPanels>
       </div>
     </StyledCVSection>

@@ -1,5 +1,5 @@
 ---
-date: '1'
+date: '2021-06-07'
 title: 'Instant Wrapped'
 cover:
 github: 'https://github.com/Jventoo/InstantWrapped/'

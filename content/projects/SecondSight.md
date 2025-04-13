@@ -6,7 +6,6 @@ external: 'https://www.artstation.com/artwork/68ENPn'
 tech:
   - Unreal Engine 4
   - C++
-  - Blueprints
 showInProjects: true
 ---
 

@@ -23,5 +23,4 @@ export const KEY_CODES = {
   ENTER: 'Enter',
 };
 
-export const RESUME_LINK =
-  'https://drive.google.com/file/d/19wKhEqZz67UHw-D6w2k6xPnYVisWxX_r/view?usp=sharing';
+export const RESUME_LINK = './Resume.pdf';

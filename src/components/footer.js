@@ -90,7 +90,6 @@ const Footer = () => {
 
       <StyledCredit tabindex="-1">
         <div>
-          Refactored by Me.
           <a href="https://brittanychiang.com/">Forked from Brittany Chiang.</a>
         </div>
         All content and trademarks property of their respective owners.

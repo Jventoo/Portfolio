@@ -123,7 +123,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   section {
-    margin: 0 auto;
+    margin: 0 inherit;
+    margin-left: 100px;
     padding: 100px 0;
     max-width: 1000px;
 
@@ -160,7 +161,6 @@ const GlobalStyle = createGlobalStyle`
 
   .numbered-heading {
     display: flex;
-    align-items: center;
     position: relative;
     margin: 10px 0 40px;
     width: 100%;
