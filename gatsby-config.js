@@ -1,5 +1,9 @@
 const config = require('./src/config');
 
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: 'Jack Vento',
@@ -143,7 +147,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: ['UA-45666519-2'],
+        trackingIds: [process.env.GA_ID],
+        gtagConfig: {
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        pluginConfig: {
+          head: true,
+        },
       },
     },
   ],
